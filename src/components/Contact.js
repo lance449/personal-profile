@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Submission from './Submission';
+import '../styles/Components.css'; // Ensure to include your styles
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -23,13 +24,42 @@ const Contact = () => {
   }
 
   return (
-    <Card className="text-center">
+    <Card className="text-center contact-card">
       <Card.Body>
         <h1>Contact Me</h1>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-          <textarea name="message" placeholder="Message" onChange={handleChange} required></textarea>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message here"
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
           <button type="submit">Submit</button>
         </form>
       </Card.Body>

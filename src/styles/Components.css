@@ -20,6 +20,16 @@
     padding: 40px; 
 }
 
+.skills-card {
+    background-color: #ffffff;
+    border: none;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
 h1 {
     font-size: 3rem;
     color: #343a40; 
@@ -40,13 +50,102 @@ h2 {
     color: #495057; 
 }
 
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.skills-list li {
+    font-size: 1.2rem;
+    background-color: #e9ecef;
+    color: #343a40;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+.skills-list li:hover {
+    background-color: #343a40;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    align-items: center; /* Center the items horizontally */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Arrange label and input vertically */
+    width: 100%; /* Take full width of the parent */
+    max-width: 500px; /* Limit maximum width */
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+    font-weight: bold; /* Make label bold */
+    color: #343a40; /* Label color */
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #343a40; 
+    outline: none;
+}
+
+textarea {
+    resize: none; 
+    min-height: 150px; 
+}
+
+button {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 150px; 
+}
+
+button:hover {
+    background-color: #495057; 
+}
+
+h1 {
+    font-size: 3rem;
+    color: #343a40; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+}
 
 @media (max-width: 768px) {
-    .about-header {
-        padding: 40px 10px; 
+    .skills-card {
+        padding: 20px;
     }
     h1 {
-        font-size: 2.5rem; 
+        font-size: 2.5rem;
+    }
+    .skills-list li {
+        font-size: 1rem;
+    }
+    .about-header {
+        padding: 40px 10px; 
     }
     h2 {
         font-size: 1.2rem; 
