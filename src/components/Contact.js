@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import Submission from './Submission';
-import '../styles/Components.css'; // Ensure to include your styles
+import '../styles/Components.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
