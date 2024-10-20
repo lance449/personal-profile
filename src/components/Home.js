@@ -9,7 +9,7 @@ const Home = () => (
     
     <Card className="text-center mt-4">
       <Card.Body>
-        <p>Welcome to my profile!</p>
+        <p>Welcome!</p>
         <p>My career goal is to excel in tech industry.</p>
       </Card.Body>
     </Card>
